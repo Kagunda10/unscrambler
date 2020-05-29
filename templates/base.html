@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>{% block title %} Unscrambler {% endblock %}</title>
+		<meta name="description" content="" />
+        <meta name="author" content="Caleb Njiiri" />
+        <style>
+            main {
+                padding-top: 50px; /* Whatever the height of your navbar is; the
+                                        default is 50px */
+                padding-bottom: 50px;
+            }
+
+        </style>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        {% endblock %}
+	</head>
+
+	<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Unscrambler</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <main role="main" class="container">
+            <div id="content container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <div class="container-md mt-2">
+            <p class="text-break text-muted">
+                When you’re stuck with some random letters, there is nothing to worry, that’s what this website is designed for. Whether you need any help or just want to learn new words or perhaps you want to cheat a little :-), in such word games, this website will save your time and frustration. Words games are going to be more fun with this.<br><br>
+
+                You can enter up to 12 letters (including two wild cards or blank tiles) and it shows you the valid words that can be made from the scrambled letters on board. Using this word helper tool, you will not only make yourself stronger against your opponent but also learn plenty of useful words and new combinations of letters, that would enrich your vocabulary as well (especially applicable to kids or learners or an enthusiast)</p>
+        </div>     
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

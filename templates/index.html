@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-md rounded">
+    <form method="POST">
+        <div class="form-group">
+            <h4 class="font-weight-bold text-center">Enter up to 12 letters, use ? as wildcards (max 2)</h4>
+            <input class="form-control" type="text" placeholder="qfghs?" name="letters">
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-dark btn-lg">Unscramble It</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% if result%}
+<div class="container-md mt-2">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Number of letters</th>
+                <th scope="col">Words</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%for key, value in result.items()%}
+            <tr>
+                <td>{{key}} Letter Words</td>
+                <td>{{value}}</td>
+            </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+{%endif%}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            {{message}}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+{% endwith %}
+{% endblock %}
+<div class="container-md mt-2">
+    <p class="text-break">
+        Word Unscrambler is a simple online tool for unscrambling/solving scrambled words, typically useful in solving word game puzzles such as Scrabble, Words with Friends, Wordscraper, TextTwist etc. So, if you need any help (or perhaps, you want to cheat a little) in such word games, this site will help you in that :-) You can enter up to 12 letters (including two wild cards or blank tiles) and it shows you the valid words that can be made from the given scrambled letters.
+    </p>
+</div>
